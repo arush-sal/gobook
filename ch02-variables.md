@@ -1,74 +1,32 @@
-# Hello World!
-
-```go
-package main // Everything in Go revolves around packages
-import (
-    "fmt"
- ) // Import the fmt or formatting package
-
-fucn main() { //Define main function "func" is the keyword of notice here.
-    fmt.Printf("Hello, World!") // The letters aren't bytes or chars, infact in Go lang these are called "runes". This adds unicode support, enabling the language to print any printable character.
-}
-```
-
-> Notice the 'P' in Printf. To export any function outside of the package or to be able to use any fucntion from a package the first letter of the function needs to be a capital letter. Same goes with other things such as variables.
-
-## Go directory structre:
-
-The Go compiler is built to operate on a particular directory structre. Therefore having the structre correct is very import for working with Go. The typical suggested directory structre should be like:
-
-```
-$GOPATH
-      |__src
-            |_<your project name>
-                                |_*.go
-
-```
-If you use the defined dir structre, you cn use the Go "install" function which will store your compiled binary in a folder called bin like shown below.
-
-```
-$GOPATH
-      |__src
-      |     |_<your project name>
-      |                         |_*.go
-      |_bin/<your project name executable>
-```
-
-## Go style:
-`go fmt` is a go function that enforces the Go formatting in a go source code. Go is very particular about the code formatting and things like braces after function declaration can't be overwritten.
-
-## Getting help in Go lang
-
-The best place to get all the documentation is `Golang.org`. But we can also have a local help program, sort of Golang's own man pages. That program is called `godoc`. It alows you to have infomation about any package, including the one you have written. e.g:
-
-`godoc fmt Printf`
-
-## Variables, Simple Types and Declarations
+# Variables, Simple Types and Declarations
 
 A variable in Golang can be decaled using `var` keyword. The default datatypes supported in Golang are:
 
 * Boolean Types: They are boolean types and consists of the two predefined constants: 
-1. `true`
-2. `false`
+
+      1. `true`
+      2. `false`
 
 > We can use the keyword `bool` to just declare a boolean, which will be initialized by the default value of `false`. As if we don't initialize any variable in Golang it gets initialized by a `Zero value` which in case of integer are '0', for float is '0.0', similarly for boolean it is false.
 
 * Numeric Types: They are again arithmetic types and they represents 
-1. Integers
-2. Floating point
+
+      1. Integers
+      2. Floating point
 
 * String types: A string type represents the set of string values. Its value is a sequence of bytes. Strings are immutable types that is once created, it is not possible to change the contents of a string. The predeclared string type is string.
 
 * Derived types: They include 
-1. Pointer types
-2. Array types
-3. Structure types
-4. Union types
-5. Function types
-6. Slice types
-7. Interface types
-8. Map types
-9. Channel Types
+
+      1. Pointer types
+      2. Array types
+      3. Structure types
+      4. Union types
+      5. Function types
+      6. Slice types
+      7. Interface types
+      8. Map types
+      9. Channel Types
 
 Declaring a variable example:
 ```go
@@ -119,7 +77,9 @@ var (
       answer2
 ) // answer2 will get the value of 4 as default.
 ```
+
 #### Numeric
+---
 
 The whole list of numeric types that are available to us in Golang is as following:
 
@@ -160,3 +120,33 @@ There is also a set of numeric types with implementation-specific sizes:
 We can use `%d` and `%f` to print integers and floating point values in a printf statement respectively. Similarly all of the `C printf` flags will work.
 
 #### Strings
+---
+
+In Golang strings are treated as an internally defined array of runes due to which it enables a user to be able to perform slicing such as creating substrings by defining any two character positions just as in python. e.g:
+
+```go
+var message string
+string = "the quick brown fox jumps over the lazy dog"
+fmt.Printf("%s", string[0:9]) // This will print "the quick". Since array index starts from 0 and space is also a character.
+fmt.Printf("%s", string[:9]) // Same as above. Because if you don't provide the value on left of colon it defaults to 0.
+fmt.Printf("%s", string[16:]) // This will print "fox jumps over the lazy dog". Because if you don't provide the value on left of colon it defaults to length of the string.
+fmt.Printf("%s", string[16:24]) // This will print "fox jumps".
+```
+
+Apart from above we can also use the `range` keyword to iterate over the string character by character. e.g:
+
+```go
+string := "the quick brown fox jumps over the lazy dog"
+for i, letter := range string {
+      fmt.Printf("%c is at %d", letter, i)
+}
+```
+
+The `range` function returns two value
+      
+      1. index of the loop
+      2. index respective value that is being iterated over
+
+You can assign the values returned by the function to any variable using the assignment variable `:=` the values will be assigned to the variables from left to right respectively. We can discard any value returned by the function by assigning it to the gutteer variable '**_**'. If discarding the value being iterated over, we can ommit the second assignment part as that is optional, but the index is mandatory.
+
+> In Golang we can use backquotes( **``** ) around a string to consider the whole string as a literal, including escape characters and anything else.
