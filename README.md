@@ -3,7 +3,7 @@
 **DISCLAIMER:**
 > I have no intent to actually make this an official book or any sort of publication. 
 
-> These are simply my personal notes that I made while learning Golang through **OReilly - Introduction to Go Programming**. That is an awesome course by the amazing @jgrahamc and I definitely suggest you to check the video tutorials by him at http://shop.oreilly.com/product/0636920035305.do. My course review : :star2: :star2: :star2: :star2: :star2:
+> These are simply my personal notes that I made while learning Golang through **OReilly - Introduction to Go Programming**. That is an awesome course by the amazing @jgrahamc and I definitely suggest you to check the video tutorial by him at http://shop.oreilly.com/product/0636920035305.do. My course review : :star2: :star2: :star2: :star2: :star2:
 
 **The repo is organized in different chapters in the following structre:**
 

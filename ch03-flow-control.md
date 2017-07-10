@@ -2,7 +2,7 @@
 
 Conditional flow in Golang is achieved using `if-else-if` and `switch-case`.
 
-#### If-Else-If
+## If-Else-If
 ---
 
 Format:
@@ -40,7 +40,7 @@ if totalBytes, error := fmt.Printf("Hello, World!"); error != nil {
 }
 ```
 
-#### Switch-Case
+## Switch-Case
 ---
 
 `switch-case` works a bit different in Golang as compared to other languages such as `C`, for example it doesn't fallthrough i.e not all of the `case` defined will be evaluated as its done in `C`. We can use the keyword `fallthrough` to explicitly enforce this behaviour.

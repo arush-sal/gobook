@@ -9,22 +9,22 @@ Visit Golang's official installation instructions [at here](https://golang.org/d
 ---
 
 ```go
-package main // Everything in Go revolves around packages
+package main // Everything in Golang revolves around packages
 import (
     "fmt"
  ) // Import the fmt or formatting package
 
 fucn main() { //Define main function "func" is the keyword of notice here.
-    fmt.Printf("Hello, World!") // The letters aren't bytes or chars, infact in Go lang these are called "runes". This adds unicode support, enabling the language to print any printable character.
+    fmt.Printf("Hello, World!") // The letters aren't bytes or chars, infact in Golang these are called "runes". This adds unicode support, enabling the language to print any printable character.
 }
 ```
 
 > Notice the 'P' in Printf. To export any function outside of the package or to be able to use any fucntion from a package the first letter of the function needs to be a capital letter. Same goes with other things such as variables.
 
-## Go directory structre:
+## Golang directory structre:
 ---
 
-The Go compiler is built to operate on a particular directory structre. Therefore having the structre correct is very import for working with Go. The typical suggested directory structre should be like:
+The Golang compiler is built to operate on a particular directory structre. Therefore having the structre correct is very import for working with Golang. The typical suggested directory structre should be like:
 
 ```
 $GOPATH
@@ -32,7 +32,7 @@ $GOPATH
             |_<your project name>
                                 |_*.go
 ```
-If you use the defined dir structre, you cn use the Go "install" function which will store your compiled binary in a folder called bin like shown below.
+If you use the defined dir structre, you can use the Golang "install" function which will store your compiled binary in a folder called bin like shown below.
 
 ```
 $GOPATH
@@ -45,7 +45,7 @@ $GOPATH
 ## Golang style:
 ---
 
-`go fmt` is a go function that enforces the Go formatting in a go source code. Go is very particular about the code formatting and things like braces after function declaration can't be overwritten.
+`go fmt` is an inbuilt function that enforces the Golang formatting in the source code. Golang is very particular about the code formatting and things like braces after function declaration can't be overwritten.
 
 ## Getting help in Golang
 ---

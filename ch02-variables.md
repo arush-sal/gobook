@@ -45,7 +45,7 @@ func main() {
 }
 ```
 
-Using `:=` you can declare and assign value to a variable together giving you the feature and feel of a dynamically typed language.
+Using `:=` you can declare and assign value to a variable together giving you the feature and feel of a dynamically typed language. In case of multiple variable declaration using `:=` Golang will check if all the variables are declared or not, if any one of the variable is not declared before then we can safely use the operator to decrale the new variable and redefine existing ones.
 
 > You can use the keyword `const` to declare a constant in Golang.
 
@@ -78,7 +78,7 @@ var (
 ) // answer2 will get the value of 4 as default.
 ```
 
-#### Numeric
+## Numeric
 ---
 
 The whole list of numeric types that are available to us in Golang is as following:
@@ -119,7 +119,7 @@ There is also a set of numeric types with implementation-specific sizes:
 
 We can use `%d` and `%f` to print integers and floating point values in a printf statement respectively. Similarly all of the `C printf` flags will work.
 
-#### Strings
+## Strings
 ---
 
 In Golang strings are treated as an internally defined array of runes due to which it enables a user to be able to perform slicing such as creating substrings by defining any two character positions just as in python. e.g:
