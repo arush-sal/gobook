@@ -1,7 +1,6 @@
 # Go Routines and Channels
 
 ## Routines
----
 
 A Go `routine` is an individual part or thread of a program that is running `concurrently` with the main program itself.
 
@@ -11,7 +10,6 @@ go foobar()
 ```
 
 ## Channels
----
 
 A `channel` is a data stream(more like a data pipe) through which you can send or receive values to and from any `Go function or routine`.
 

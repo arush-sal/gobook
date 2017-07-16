@@ -56,7 +56,7 @@ func awesomeFunction() (someNumber int, e error) {
 }
 ```
 
-**Defer**
+#### Defer
 
 The keyword `defer` can be used to perform any certain operation that we wish to perform before the function exit. This is specially useful for doing things like closing opened resources such as a file or open connections such as to a socket file.
 

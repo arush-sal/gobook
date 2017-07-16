@@ -1,12 +1,10 @@
 # Getting started with Go - a fast track overview.
 
 ## Installing Go
----
 
 Visit Go's official installation instructions [at here](https://golang.org/doc/install)
 
 ## Hello World!
----
 
 ```go
 package main // Everything in Go revolves around packages
@@ -23,7 +21,6 @@ func main() { //Define main function "func" is the keyword to notice here.
 > Notice the 'P' in Printf. To export any function outside of a package or to be able to use any function from a package the first letter of the function needs to be a capital letter. Same goes with other things such as variables.
 
 ## Go directory structure:
----
 
 The Go compiler is built to operate on a particular directory structure. Therefore having the structure correct is very important for working with Go. The typical suggested directory structure should be like:
 
@@ -44,12 +41,10 @@ $GOPATH
 ```
 
 ## Go style:
----
 
 `go fmt` is an inbuilt function that enforces the Go formatting in the source code. Go is very particular about the code formatting and things like braces after function declaration can't be overwritten.
 
 ## Getting help in Go
----
 
 The best place to get all the documentation is `golang.org`. But we can also have a local help program, sort of Go's own man pages. That program is called `godoc`. It allows you to have information about any package, including the one you have written.
 

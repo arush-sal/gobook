@@ -1,7 +1,6 @@
 # Custom Datatypes
 
 ## Arrays and Slices
----
 
 In Go to deal with linear ordered data sets or data structures we have two datatypes
 1. `Arrays`
@@ -10,7 +9,6 @@ In Go to deal with linear ordered data sets or data structures we have two datat
 > `Arrays` are rarely used in Go and in general `slices` are always used and preferred for reasons of flexibility and speed. Read [this](https://stackoverflow.com/questions/30525184/array-vs-slice-accessing-speed).
 
 #### Arrays
----
 
 Format:
 ```go
@@ -21,7 +19,6 @@ array := [...] string{"a","b","c","d","e","f","g","h","i","j"} // Declared a arb
 > Note: Array is always passed around as "value" instead of reference i.e it will pass a copy of the array not the actual array, that had some significant memory performance implications. As every time it will create a new memory block.
 
 #### Slices
----
 
 `Slices` by nature are typically a data chunk out of an under lying `array` i.e a part of some existing `array`. Therefore it always will have a starting and an end point, if you don't provide any then it will take the beginning and ending point of the `array` as the default.
 
@@ -51,7 +48,6 @@ slice[1] = "b"
 * Passing slice as an argument to a function: `foobar(slice []string)`
 
 ## Maps
----
 
 Maps are heterogeneous data structures with no fixed numerical index part. These are best used to create `key`-`value` stores, lookup tables, implementing sets, etc. In other languages, it is called `Dictionary`, `Hash`, `Assertive Array`, etc.
 
@@ -72,9 +68,9 @@ newMap := make(map[string]string){
 fmt.Printf(newMap["Name"]) // If you try to access a non-existing element in a map you will get a `zero-type` value for that datatype i.e `nil` for `string`, `0` for `int`, `0.0` for float and so on.
 ```
 
-> A map returns two values, the `value` for the `key` mentioned and a boolean status. We test an element existence using the `comma-ok` syntax.
+> A map returns two values, the `value` for the `key` mentioned and a boolean status. We test an element existence using the [comma-ok](./ch05-custom-datatypes.md#comma-ok-format) syntax.
 
-#### Comma-Ok Format
+#### Comma-Ok Syntax
 ```go
 mailId, ok := newMap["Email"] = "me@aru.sh" // If the particular 'key-value' doesn't exist it will return 'false' and it will return 'true' if it exists, assigning the value to 'ok'.
 
@@ -92,7 +88,6 @@ if !ok {
     > If you try to delete a non-existing element from a map then Go won't complain about it i.e it won't through an error.
 
 ## Errors
----
 
 Errors are a first-class citizen of Go ecosystem i.e it is an internal default variable of interface datatype provided by the language. The language is built around handling errors returned by functions as compared to exceptions. Therefore there is no `error handling` provided by default in Go although there is an exception process called `panic` and `recover` which does seem like sort of `error handling` but it is not recommended to use that quite often. By convention, errors are returned by the functions and he calling function has to take care of it.
 
@@ -124,7 +119,6 @@ func main() {
 ```
 
 #### Errors package
----
 
 To define a custom `error type` or to retrieve the `error type` we use the `errors package`.
 
@@ -136,6 +130,7 @@ mathematicalArmageddon = errors.New("Can't divide by Zero") // Define a new erro
 ```
 
 #### Other return types
+
 > panic() - We can use this function as a self destruct on the program itself in case of an error. It will cause an immediate program termination with the `stacktrace` printed to the STDOUT.
 
 > recover() - This can be used to recover from a `panic()` but should only be used a feature of _very rare_ usage.

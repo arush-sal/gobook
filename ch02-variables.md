@@ -79,7 +79,6 @@ var (
 ```
 
 ## Numeric
----
 
 The whole list of numeric types that are available to us in Go is as following:
 
@@ -120,7 +119,6 @@ There is also a set of numeric types with implementation-specific sizes:
 We can use `%d` and `%f` to print integers and floating point values in a printf statement respectively. Similarly, all of the `C printf` flags will work.
 
 ## Strings
----
 
 In Go, strings are treated as an internally defined array of runes due to which it enables a user to be able to perform slicing such as creating substrings by defining any two character positions just as in python. e.g:
 

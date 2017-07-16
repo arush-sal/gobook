@@ -3,7 +3,6 @@
 Conditional flow in Go is achieved using `if-else-if` and `switch-case`.
 
 ## If-Else-If
----
 
 Format:
 
@@ -41,7 +40,6 @@ if totalBytes, error := fmt.Printf("Hello, World!"); error != nil {
 ```
 
 ## Switch-Case
----
 
 `switch-case` works a bit different in Go as compared to other languages such as `C`, for example, it doesn't fallthrough i.e, not all of the `case` defined will be evaluated as it is done in `C`. We can use the keyword `fallthrough` to explicitly enforce this behavior.
 
@@ -121,7 +119,6 @@ switch {
 ```
 
 #### Loops
----
 
 Go has only one keyword to be used for loops i.e `for` but it supports all different kind of formats. Therefore we can use `for` to achieve the functionality of `while` and traditional `C` `for`.
 
