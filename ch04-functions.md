@@ -1,6 +1,6 @@
-# Fucntions
+# Functions
 
-We have already used functions in form of the `main` funcion using the `func` keyword.
+We have already used functions in form of the `main` function using the `func` keyword.
 
 Format:
 
@@ -10,7 +10,7 @@ func awesomeFunction() { // Notice the same line curly brace, its a mandatory fo
 }
 ```
 
-We can specify the fucntion arguments like:
+We can specify the function arguments like:
 
 ```go
 func awesomeFunction(arg1 string, arg2 int, arg3 float32) { 
@@ -38,7 +38,7 @@ Using function `return` values:
 
 ```go
 func awesomeFunction() error {
-      // Notice that it is not mandator-y to specify the return value name but we can still specify one if we wish, in which case it would be
+      // Notice that it is not mandatory to specify the return value name but we can still specify one if we wish, in which case it would be
       // returned implicitly.
       <cool stuffs>
 
@@ -46,7 +46,7 @@ func awesomeFunction() error {
 }
 ```
 
-In Golang are not bound to return just a single value but instead we can even return multiple values from a fucntion
+In Go, we are not bound to return just a single value but instead, we can even return multiple values from a function
 
 ```go
 func awesomeFunction() (someNumber int, e error) {
@@ -58,9 +58,9 @@ func awesomeFunction() (someNumber int, e error) {
 
 **Defer**
 
-The keyword `defer` can be used to perform aany certain operation that we wish to perform before the function exit. This is specicially useful for doing things like closing opened resources such as a file or open connections such as to a socket file.
+The keyword `defer` can be used to perform any certain operation that we wish to perform before the function exit. This is specially useful for doing things like closing opened resources such as a file or open connections such as to a socket file.
 
-We can have multiple `defer` in a single function, they works by `FILO(First In Last Out)` so the first defer you define in the function will always will be executed as the last operation of the funcion.
+We can have multiple `defer` in a single function, they work by `FILO(First In Last Out)` so the first defer you define in the function will always be executed as the last operation of the function.
 
 Example:
 

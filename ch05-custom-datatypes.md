@@ -1,13 +1,13 @@
-# Custome Datatypes
+# Custom Datatypes
 
 ## Arrays and Slices
 ---
 
-In Golang to deal with linear ordered data sets or data structures we have two datatypes
+In Go to deal with linear ordered data sets or data structures we have two datatypes
 1. `Arrays`
 2. `Slices`
 
-> `Arrays` are rarely used in Golang and in general `slices` are always used and preffered for reasons fof flexibility and speed. Read [this](https://stackoverflow.com/questions/30525184/array-vs-slice-accessing-speed).
+> `Arrays` are rarely used in Go and in general `slices` are always used and preferred for reasons of flexibility and speed. Read [this](https://stackoverflow.com/questions/30525184/array-vs-slice-accessing-speed).
 
 #### Arrays
 ---
@@ -15,17 +15,17 @@ In Golang to deal with linear ordered data sets or data structures we have two d
 Format:
 ```go
 array := [10] string{"a","b","c","d","e","f","g","h","i","j"} // Declared a fixed size array
-array := [...] string{"a","b","c","d","e","f","g","h","i","j"} // Declared a arbitary size array
+array := [...] string{"a","b","c","d","e","f","g","h","i","j"} // Declared a arbitrary size array
 ```
 
-> Note: Array are always passed around as "value" instead of reference i.e it will pass a copy of the array not the actual array, that had some significant memory performance implications. As everytime it will create a new memory block.
+> Note: Array is always passed around as "value" instead of reference i.e it will pass a copy of the array not the actual array, that had some significant memory performance implications. As every time it will create a new memory block.
 
 #### Slices
 ---
 
-`Slices` by nature are typically a data chunck out of an unlying `array` i.e a part of some existing `array`. Therefore it always will have a starting and an end point, if you don't provide any then it will take the beginning and ending point of the `array` as the default.
+`Slices` by nature are typically a data chunk out of an under lying `array` i.e a part of some existing `array`. Therefore it always will have a starting and an end point, if you don't provide any then it will take the beginning and ending point of the `array` as the default.
 
-> Note: `Slices` are always passed around as "reference" instead of value i.e it will pass the actual `slice` not the copy of the `slice`. Because `slices` are passed by reference therefore they are mutable by nature i.e you can change the slice values by replacing it with another value.
+> Note: `Slices` are always passed around as "reference" instead of value i.e it will pass the actual `slice` not the copy of the `slice`. Because `slices` are passed by reference, therefore, they are mutable by nature i.e you can change the slice values by replacing it with another value.
 
 Format:
 ```go
@@ -53,11 +53,11 @@ slice[1] = "b"
 ## Maps
 ---
 
-Maps are hetrogenous data structures with no fixed numerical index part. These are best used to create `key`-`value` stores, lookup tables, implementing sets, etc. In other languages it is called `Dictionary`, `Hash`, `Assertive Array`, etc.
+Maps are heterogeneous data structures with no fixed numerical index part. These are best used to create `key`-`value` stores, lookup tables, implementing sets, etc. In other languages, it is called `Dictionary`, `Hash`, `Assertive Array`, etc.
 
 Format:
 ```go
-newMap := make(map[string]string) // In '[]' we provide the datatype for the key and outside it we provide the datatype of the 'value'. This will create a synamic size map.
+newMap := make(map[string]string) // In '[]' we provide the datatype for the key and outside it we provide the datatype of the 'value'. This will create a dynamic size map.
 newMap["Name"] = "Arush"
 newMap["TwitterHandle"] = "arush_sal"
 newMap["Email"] = "me@aru.sh"
@@ -74,7 +74,7 @@ fmt.Printf(newMap["Name"]) // If you try to access a non-existing element in a m
 
 > A map returns two values, the `value` for the `key` mentioned and a boolean status. We test an element existence using the `comma-ok` syntax.
 
-**Comma-Ok Format**:
+#### Comma-Ok Format
 ```go
 mailId, ok := newMap["Email"] = "me@aru.sh" // If the particular 'key-value' doesn't exist it will return 'false' and it will return 'true' if it exists, assigning the value to 'ok'.
 
@@ -85,16 +85,16 @@ if !ok {
 }
 ```
 
-**Common slice/array functions:**
+#### Common slice/array functions:
 
-* Looping: We can iterate over a map just like any other data structre using the keyword `range` and it will return both the `keys` and the `values` **in no particular order**, but we can define the order by the use of sorting.
-* Deleting an element of a map: `delele(newMap, "TwitterHandle")`
-    > If you try to delele a non-existing element from a map then Golang won't complain about it i.e it won't through an error.
+* Looping: We can iterate over a map just like any other data structure using the keyword `range` and it will return both the `keys` and the `values` **in no particular order**, but we can define the order by the use of sorting.
+* Deleting an element of a map: `delete(newMap, "TwitterHandle")`
+    > If you try to delete a non-existing element from a map then Go won't complain about it i.e it won't through an error.
 
 ## Errors
 ---
 
-Errors are a first-class citizen of Golang ecosystem i.e it is an internal default variable of interface datatype provided by the language. The language is built around handling errors returned by functions as compared to exceptions. Therefore there is no `error handling` provided by default in Golang although there is an exception process caled `panic` and `recover` which does seems like sort of `error handling` but it is not recommended to use that quite often. By convention errors are returned by the functions and he calling function has to take care of it.
+Errors are a first-class citizen of Go ecosystem i.e it is an internal default variable of interface datatype provided by the language. The language is built around handling errors returned by functions as compared to exceptions. Therefore there is no `error handling` provided by default in Go although there is an exception process called `panic` and `recover` which does seem like sort of `error handling` but it is not recommended to use that quite often. By convention, errors are returned by the functions and he calling function has to take care of it.
 
 Format:
 ```go
@@ -126,7 +126,7 @@ func main() {
 #### Errors package
 ---
 
-To define a custom `error type` or to retrive the `error type` we use the `errors package`.
+To define a custom `error type` or to retrieve the `error type` we use the `errors package`.
 
 Format:
 ```go
@@ -135,7 +135,7 @@ import "errors"
 mathematicalArmageddon = errors.New("Can't divide by Zero") // Define a new error type called "mathematicalArmageddon, which we can later on compare to certain error conditions and define our flow control based on that."
 ```
 
-**Other return types**
+#### Other return types
 > panic() - We can use this function as a self destruct on the program itself in case of an error. It will cause an immediate program termination with the `stacktrace` printed to the STDOUT.
 
 > recover() - This can be used to recover from a `panic()` but should only be used a feature of _very rare_ usage.

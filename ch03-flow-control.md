@@ -1,6 +1,6 @@
-# Controling Conditional follow 
+# Controlling Conditional follow 
 
-Conditional flow in Golang is achieved using `if-else-if` and `switch-case`.
+Conditional flow in Go is achieved using `if-else-if` and `switch-case`.
 
 ## If-Else-If
 ---
@@ -14,7 +14,7 @@ if <assignment or initialization>; <condition> {
 
 }
 ```
-Just like in above example we can do multiple assignment in single line and can base our condition on that.
+Just like in above example we can do multiple assignments in a single line and can base our condition on that.
 
 Example:
 
@@ -43,7 +43,7 @@ if totalBytes, error := fmt.Printf("Hello, World!"); error != nil {
 ## Switch-Case
 ---
 
-`switch-case` works a bit different in Golang as compared to other languages such as `C`, for example it doesn't fallthrough i.e not all of the `case` defined will be evaluated as its done in `C`. We can use the keyword `fallthrough` to explicitly enforce this behaviour.
+`switch-case` works a bit different in Go as compared to other languages such as `C`, for example, it doesn't fallthrough i.e, not all of the `case` defined will be evaluated as it is done in `C`. We can use the keyword `fallthrough` to explicitly enforce this behavior.
 
 Format:
 
@@ -105,7 +105,7 @@ for _, letter := range message{
 fmt.Printf("Vowels = %d, Consonants = %d, Aes = %d, Zeds = %d", vowel, consonants, aes, zeds)
 ```
 
-Similarly we could also do the following:
+Similarly, we could also do the following:
 
 ```go
 totalBytes, err := fmt.Printf("Hello, World!")
@@ -123,7 +123,7 @@ switch {
 #### Loops
 ---
 
-Golang has only only one keyword to be used for loops i.e `for` but it support different kind of formats. Therefore we can use `for` to achieve the funcationality of `while` and traditional `C` `for`.
+Go has only one keyword to be used for loops i.e `for` but it supports all different kind of formats. Therefore we can use `for` to achieve the functionality of `while` and traditional `C` `for`.
 
 `while` Format:
 
