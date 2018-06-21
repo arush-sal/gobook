@@ -4,8 +4,8 @@ A variable in Go can be declared using `var` keyword. The default datatypes supp
 
 * Boolean Types: They are boolean types and consists of the two predefined constants: 
 
-      1. `true`
-      2. `false`
+      1. true
+      2. false
 
 > We can use the keyword `bool` to just declare a boolean, which will be initialized by the default value of `false`. As if we don't initialize any variable in Go it gets initialized by a `Zero value` which in the case of an integer are '0', for a float is '0.0', similarly, for boolean it is false.
 
@@ -124,7 +124,7 @@ In Go, strings are treated as an internally defined array of runes due to which 
 
 ```go
 var message string
-string = "the quick brown fox jumps over the lazy dog"
+message = "the quick brown fox jumps over the lazy dog"
 fmt.Printf("%s", string[0:9]) // This will print "the quick". Since array index starts from 0 and space is also a character.
 fmt.Printf("%s", string[:9]) // Same as above. Because if you don't provide the value on the left of the colon it defaults to 0.
 fmt.Printf("%s", string[16:]) // This will print "fox jumps over the lazy dog". Because if you don't provide the value on the left of the colon it defaults to the length of the string.
