@@ -53,13 +53,13 @@ Maps are heterogeneous data structures with no fixed numerical index part. These
 
 Format:
 ```go
-newMap := make(map[string]string) // In '[]' we provide the datatype for the key and outside it we provide the datatype of the 'value'. This will create a dynamic size map.
+newMap := make(map[string]string) // In '[]' we provide the datatype for the key and outside it we provide the datatype of the 'value'. This will create a dynamic size map using the `make` function.
 newMap["Name"] = "Arush"
 newMap["TwitterHandle"] = "arush_sal"
 newMap["Email"] = "me@aru.sh"
 
 // Creating a static map.
-newMap := make(map[string]string){
+newMap := map[string]string{
     "Name": "Arush",
     "TwitterHandle": "arush_sal",
     "Email": "me@aru.sh",
