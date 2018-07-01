@@ -118,7 +118,7 @@ switch {
 }
 ```
 
-#### Loops
+## Loops
 
 Go has only one keyword to be used for loops i.e `for` but it supports all different kind of formats. Therefore we can use `for` to achieve the functionality of `while` and traditional `C` `for`.
 
