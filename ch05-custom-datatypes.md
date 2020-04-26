@@ -65,7 +65,7 @@ newMap := map[string]string{
     "Email": "me@aru.sh",
 }
 
-fmt.Printf(newMap["Name"]) // If you try to access a non-existing element in a map you will get a `zero-type` value for that datatype i.e `nil` for `string`, `0` for `int`, `0.0` for float and so on.
+fmt.Print(newMap["Name"]) // If you try to access a non-existing element in a map you will get a `zero-type` value for that datatype i.e `nil` for `string`, `0` for `int`, `0.0` for float and so on.
 ```
 
 > A map returns two values, the `value` for the `key` mentioned and a boolean status. We test an element existence using the [comma-ok](./ch05-custom-datatypes.md#comma-ok-format) syntax.
@@ -75,9 +75,9 @@ fmt.Printf(newMap["Name"]) // If you try to access a non-existing element in a m
 mailId, ok := newMap["Email"] = "me@aru.sh" // If the particular 'key-value' doesn't exist it will return 'false' and it will return 'true' if it exists, assigning the value to 'ok'.
 
 if !ok {
-    fmt.Printf("Key not found")
+    fmt.Print("Key not found")
 } else {
-    fmt.Printf(mailId)
+    fmt.Print(mailId)
 }
 ```
 
@@ -85,7 +85,7 @@ if !ok {
 
 * Looping: We can iterate over a map just like any other data structure using the keyword `range` and it will return both the `keys` and the `values` **in no particular order**, but we can define the order by the use of sorting.
 * Deleting an element of a map: `delete(newMap, "TwitterHandle")`
-    > If you try to delete a non-existing element from a map then Go won't complain about it i.e it won't through an error.
+    > If you try to delete a non-existing element from a map then Go won't complain about it i.e it won't throw an error.
 
 ## Errors
 
