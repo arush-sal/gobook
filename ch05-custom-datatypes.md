@@ -12,8 +12,8 @@ In Go to deal with linear ordered data sets or data structures we have two datat
 
 Format:
 ```go
-array := [10] string{"a","b","c","d","e","f","g","h","i","j"} // Declared a fixed size array
-array := [...] string{"a","b","c","d","e","f","g","h","i","j"} // Declared a arbitrary size array
+array := [10]string{"a","b","c","d","e","f","g","h","i","j"} // Declared a fixed size array
+array := [...]string{"a","b","c","d","e","f","g","h","i","j"} // Declared a arbitrary size array
 ```
 
 > Note: Array is always passed around as "value" instead of reference i.e it will pass a copy of the array not the actual array, that had some significant memory performance implications. As every time it will create a new memory block.
@@ -26,8 +26,8 @@ array := [...] string{"a","b","c","d","e","f","g","h","i","j"} // Declared a arb
 
 Format:
 ```go
-slice := [] string{"a","b","c","d","e","f","g","h","i","j"} // This is a static slice with the elements pre-declared.
-slice := make([] string M, N) // This is a dynamic slice with no elements in it. 'M' and 'N' are an optional value that needs to a positive integer to initialize the 'slice' with the given number of empty or 'null' elements. 'M' will define it's current capacity and 'N' will define its maximum capacity.
+slice := []string{"a","b","c","d","e","f","g","h","i","j"} // This is a static slice with the elements pre-declared.
+slice := make([]string M, N) // This is a dynamic slice with no elements in it. 'M' and 'N' are an optional value that needs to a positive integer to initialize the 'slice' with the given number of empty or 'null' elements. 'M' will define it's current capacity and 'N' will define its maximum capacity.
 
 // Assigning value to an element position of slice
 slice[0] = "a"
