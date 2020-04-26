@@ -89,7 +89,7 @@ if !ok {
 
 ## Errors
 
-Errors are a first-class citizen of Go ecosystem i.e it is an internal default variable of interface datatype provided by the language. The language is built around handling errors returned by functions as compared to exceptions. Therefore there is no `error handling` provided by default in Go although there is an exception process called `panic` and `recover` which does seem like sort of `error handling` but it is not recommended to use that quite often. By convention, errors are returned by the functions and he calling function has to take care of it.
+Errors are a first-class citizen of Go ecosystem i.e it is an internal default variable of interface datatype provided by the language. The language is built around handling errors returned by functions as compared to exceptions. Therefore there is no `error handling` provided by default in Go although there is an exception process called `panic` and `recover` which does seem like sort of `error handling` but it is not recommended to use that quite often. By convention, errors are returned by the functions and the calling function has to take care of it.
 
 Format:
 ```go
@@ -100,10 +100,10 @@ Usage:
 ```go
 func foobar(dividend, divisor int) (int, error) {
     if divisor == 0 {
-        return fmt.Errorf("Can't divide by Zero")
+        return 0, fmt.Errorf("Can't divide by Zero")
     } else {
         result := dividend/divisor
-        return result
+        return result, nil
     }
 }
 
