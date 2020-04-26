@@ -20,7 +20,7 @@ array := [...]string{"a","b","c","d","e","f","g","h","i","j"} // Declared a arbi
 
 #### Slices
 
-`Slices` by nature are typically a data chunk out of an under lying `array` i.e a part of some existing `array`. Therefore it always will have a starting and an end point, if you don't provide any then it will take the beginning and ending point of the `array` as the default.
+`Slices` by nature are typically a data chunk out of an underlying `array`. Therefore it always will have a starting and an end point, if you don't provide any then it will take the beginning and ending point of the `array` as the default.
 
 > Note: `Slices` are always passed around as "reference" instead of value i.e it will pass the actual `slice` not the copy of the `slice`. Because `slices` are passed by reference, therefore, they are mutable by nature i.e you can change the slice values by replacing it with another value.
 
