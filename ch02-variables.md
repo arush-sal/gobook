@@ -33,7 +33,7 @@ Declaring a variable example:
 func main() {
       var message string
       message = "Hello, World!"
-      fmt.Printf("message")
+      fmt.Printf(message)
 }
 ```
 
@@ -41,7 +41,7 @@ This gives the sense that Go is a statically typed language such as `Java` or `C
 ```go
 func main() {
       message := "Hello, World!"
-      fmt.Printf("message")
+      fmt.Printf(message)
 }
 ```
 
@@ -61,7 +61,7 @@ Another way of explicitly declaring the datatype and assigning the value can be 
 ```go
 func main() {
       message := string("Hello, World!")
-      fmt.Printf("message")
+      fmt.Printf(message)
 }
 ```
 
