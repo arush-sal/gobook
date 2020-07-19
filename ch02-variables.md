@@ -125,17 +125,22 @@ In Go, strings are treated as an internally defined array of runes due to which 
 ```go
 var message string
 message = "the quick brown fox jumps over the lazy dog"
-fmt.Printf("%s", string[0:9]) // This will print "the quick". Since array index starts from 0 and space is also a character.
-fmt.Printf("%s", string[:9]) // Same as above. Because if you don't provide the value on the left of the colon it defaults to 0.
-fmt.Printf("%s", string[16:]) // This will print "fox jumps over the lazy dog". Because if you don't provide the value on the left of the colon it defaults to the length of the string.
-fmt.Printf("%s", string[16:24]) // This will print "fox jumps".
+
+// This will print "the quick" excluding the 9th rune. Since array index starts from 0 and space is also a character.
+fmt.Printf("%s", message[0:9])
+// Same as above. Because if you don't provide the value on the left of the colon it defaults to 0.
+fmt.Printf("%s", message[:9])
+// This will print "fox jumps over the lazy dog" including the 16th rune. Because if you don't provide the value on the left of the colon it defaults to the length of the string.
+fmt.Printf("%s", message[16:])
+// This will print "fox jump" excluding the 24th rune 's'.
+fmt.Printf("%s", message[16:24])
 ```
 
 Apart from above, we can also use the `range` keyword to iterate over the string character by character. e.g:
 
 ```go
-string := "the quick brown fox jumps over the lazy dog"
-for i, letter := range string {
+msg := "the quick brown fox jumps over the lazy dog"
+for i, letter := range msg {
       fmt.Printf("%c is at %d", letter, i)
 }
 ```
