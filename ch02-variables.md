@@ -48,6 +48,17 @@ func main() {
 Using `:=` you can declare and assign a value to a variable together giving you the feature and feel of a dynamically typed language. In the case of multiple variable declarations using `:=` Go will check if all the variables are declared or not if any one of the variables is not declared before then we can safely use the operator to declare the new variable and redefine existing ones.
 
 > You can use the keyword `const` to declare a constant in Go.
+> Quick word on constants from Effective Go:
+
+```
+Constants in Go are just that—constant.
+They are created at compile time, even when defined as locals in functions, and can only be numbers, characters (runes), strings or booleans.
+Because of the compile-time restriction, the expressions that define them must be constant expressions, evaluatable by the compiler.
+For instance:
+      1<<3 is a constant expression, while math.Sin(math.Pi/4) is not because the function call to math.Sin needs to happen at runtime.
+      "foo" is a constant expression, while []string{"foo"} is not because slices and arrays are always evaluated during runtime.
+```
+
 
 Multiple declarations can be used by the usage of `()` with any declarative keyword such as `var` or `const`. e.g:
 ```go
